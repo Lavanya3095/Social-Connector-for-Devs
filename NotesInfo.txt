@@ -8,6 +8,8 @@ JWT: json web token, token thet user passes during logging in to ensure the secu
   jwt.verify(): 
 Passport: the passport validates the jwt and gets the user information for the session. so that only when logged in the user can access the protected routes.
   jwt_strategy: use the jwt strategy for passport to validate the user based on the bearer token.
+  fromAuthHeaderAsBearerToken(): will make the header to get the bearer token as jwt token.
+  authenticate(): in the endpoint creation, this will ensure the protected route using jwt strategy. 
 
 Bcryptjs: 
   becrypt.gensalt(): used to hash the password using the salt. also can compare the hash with the password given by the user.
