@@ -1,5 +1,6 @@
 Promise: The promise that an particular action takes place.
 BodyParser : to get the data from the req.body and parse them to use it further
+Mongoosechemas: created mongoose schema for users and profile using new Schema({this portion has the key and type for every field u need in mongodb document})
 JWT: json web token, token thet user passes during logging in to ensure the secured access to the database.
   need: payload
         secretkey
@@ -13,3 +14,6 @@ Passport: the passport validates the jwt and gets the user information for the s
 
 Bcryptjs: 
   becrypt.gensalt(): used to hash the password using the salt. also can compare the hash with the password given by the user.
+validator: validates the input based on validator library
+  validateRegisterInput(), validateLoginrInput(): will take the data from the body of the registration page and login page respectively as paramenter and check for errors. returns the error as string.
+  there are predefined functions like isEmail, isEmpty and length in the validation library. Using these to validate the user inputs.
