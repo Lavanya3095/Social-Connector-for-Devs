@@ -29,3 +29,10 @@ Creating express API for
     update like: logic: when user hits the post(/likes/:id), the user id will be put into the likes array of the post. We can know who all liked the post. In futue if someone likes the post we will check if the user id has already in the likes array, if so then the like foe the user will not work again.
   DELETE: user, profile, experience, education (using id in the url as parameter).
     To delete post or a comment, first find using the id and then splice the array then save the rest of the array and then display the json document
+
+
+
+
+********************REACT*********************************************************************************
+In the package.json, add proxy to make the react to point the same port as that of nodejs
+Use concurrently, to use multiple commands execute at once. just run npm run server inside the node then it will run both react and nod.
