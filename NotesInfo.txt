@@ -35,4 +35,9 @@ Creating express API for
 
 ********************REACT*********************************************************************************
 In the package.json, add proxy to make the react to point the same port as that of nodejs
-Use concurrently, to use multiple commands execute at once. just run npm run server inside the node then it will run both react and nod.
+Use concurrently, to use multiple commands execute at once. just run npm run server inside the node then it will run both react and node.
+
+AXIOS : used to communicate the frontend with the backend
+created the register and login forms in react added the constructor to take the values in form and change the state using a function
+  onChange(): this will uset setState({[e.target.name]:e.target.value}). 
+  onSubmit(): will have actuons of the form 
