@@ -41,3 +41,14 @@ AXIOS : used to communicate the frontend with the backend
 created the register and login forms in react added the constructor to take the values in form and change the state using a function
   onChange(): this will uset setState({[e.target.name]:e.target.value}). 
   onSubmit(): will have actuons of the form 
+
+redux: state manager. cannot mutate the state but copy it and then modify it.
+Send todos to components using redux. Share the state data amnong components using redux.
+When ajax request is made the redux will call the action.
+
+connect: used to connect redux to a component so import the connect in the component
+reducer will dispatch the data when ever the action is needed and get the states in the component.
+
+To get any auth state into the component use mapStateToProps(state) takes state as parameter and put state to prpperty so that itcan be used anywhere in the component.
+
+In react, any property in a component must be mapped to proptypes.
