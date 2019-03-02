@@ -52,3 +52,5 @@ reducer will dispatch the data when ever the action is needed and get the states
 To get any auth state into the component use mapStateToProps(state) takes state as parameter and put state to prpperty so that itcan be used anywhere in the component.
 
 In react, any property in a component must be mapped to proptypes.
+
+when user logged in if the user hit login in url the dashboard should be displayed. For this, in ligin.js and register.js check if user user logged in using isAuthenticated is true or not in the componentDidMount() function and then this.props.history.push('/dashboard)
