@@ -10,6 +10,7 @@ import { clearCurrentProfile } from "./actions/profileActions";
 
 import PrivateRoute from "./components/common/PrivateRoute";
 import CreateProfile from "./components/create-profile/CreateProfile";
+import EditProfile from "./components/edit-profile/EditProfile";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Landing from "./components/layout/Landing";
@@ -58,6 +59,13 @@ class App extends Component {
                   exact
                   path="/create-profile"
                   component={CreateProfile}
+                />
+              </Switch>
+              <Switch>
+                <PrivateRoute
+                  exact
+                  path="/edit-profile"
+                  component={EditProfile}
                 />
               </Switch>
             </div>
