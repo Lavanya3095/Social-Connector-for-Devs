@@ -56,3 +56,5 @@ In react, any property in a component must be mapped to proptypes.
 when user logged in if the user hit login in url the dashboard should be displayed. For this, in ligin.js and register.js check if user user logged in using isAuthenticated is true or not in the componentDidMount() function and then this.props.history.push('/dashboard)
 
 The input form group in logina nd regsiter  has been moved to component as textFieldGroup component. Make variables there in the component, assign proptypes for them and create form elements inside return(). Call the textFieldGroup component from the login and register user and pass the values that the form elements should have.
+
+PrivateRoute: the dashboard has to be accessible only when logged in so create PrivateRoute component, get the auth props in the PrivateRoute component and create route based on condition (isAuthenticated===true?retain dashboard component: login component). also add private route in app.js with a <Switch></Switch> to avaoid unwanted routing.
