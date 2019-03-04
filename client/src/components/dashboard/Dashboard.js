@@ -26,12 +26,10 @@ class Dashboard extends Component {
     } else {
       //Check if user has profile
       if (Object.keys(profile).length > 0) {
-        const toLink = "/profile/" + profile.handle;
         dashboardContent = (
           <div>
             <p className="lead text-muted">
-              {" "}
-              Welcome<Link to={toLink}> {user.name}</Link>
+              Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
             </p>
             <ProfileActions />
             <Experience experience={profile.experience} />
