@@ -60,3 +60,8 @@ The input form group in logina nd regsiter  has been moved to component as textF
 PrivateRoute: the dashboard has to be accessible only when logged in so create PrivateRoute component, get the auth props in the PrivateRoute component and create route based on condition (isAuthenticated===true?retain dashboard component: login component). also add private route in app.js with a <Switch></Switch> to avaoid unwanted routing.
 
 Creating new page eg. /edit-profile: Create component EditProfile, add the input field gropus and to create form structure(whatever u need in the page) and the onclick, onsubmit events, lifecycle method, add the route in app.js using <switch> and <privateroute>, add the actions in the profileActions that is call the backend api for that webpage and integrate with the backend.
+
+To make state in the component to pop up in redux: 
+  create component, add elements using input groups, in the lifecycle method call the function to execute function. Write the function in the profileAction.js. while writing the function , add the types for promise and catch. 
+  Also include the type in the types.js. 
+  Add reducer in the profileReducer.js to indicate what are the changes to be made in the state.
