@@ -65,3 +65,18 @@ To make state in the component to pop up in redux:
   create component, add elements using input groups, in the lifecycle method call the function to execute function. Write the function in the profileAction.js. while writing the function , add the types for promise and catch. 
   Also include the type in the types.js. 
   Add reducer in the profileReducer.js to indicate what are the changes to be made in the state.
+
+  rel="noopener noreferrer": research on this
+
+  create reducer for post. 
+    initialize the states in reducer with const to initial values which can be empty array or boolean value.
+    create function to set the action.type based on initialState, use switch statements to switch through action.type
+    create the types, in types.js for the redux to show
+      GET_POST, POST_LOADING .
+    update the root reducer with the post reducer.
+    create the postActions.js, wher u write the action function basically wat the action does.
+      import axios and the required types.
+      write function definition that will take postData passed to the function as argument and dispatch the action.
+      inside the function use axios and call the backend api that we created using the node.js and pass the postData. In the promise, u will get result and then u have to dispatch the action saying it to change the type of the action and payload(response that the api will return to this function as a promise).In the catch, change the type to GET_ERRORS and payload(error response returned by the api).
+    
+
