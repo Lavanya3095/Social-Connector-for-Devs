@@ -68,15 +68,28 @@ To make state in the component to pop up in redux:
 
   rel="noopener noreferrer": research on this
 
-  create reducer for post. 
-    initialize the states in reducer with const to initial values which can be empty array or boolean value.
-    create function to set the action.type based on initialState, use switch statements to switch through action.type
-    create the types, in types.js for the redux to show
-      GET_POST, POST_LOADING .
-    update the root reducer with the post reducer.
-    create the postActions.js, wher u write the action function basically wat the action does.
-      import axios and the required types.
-      write function definition that will take postData passed to the function as argument and dispatch the action.
-      inside the function use axios and call the backend api that we created using the node.js and pass the postData. In the promise, u will get result and then u have to dispatch the action saying it to change the type of the action and payload(response that the api will return to this function as a promise).In the catch, change the type to GET_ERRORS and payload(error response returned by the api).
+PostFeed:
+  To get post from user:
+    Create component Post and call the PostForm component(has the html elements in it)
+    In the PostForm create the react/html elements using the    TextAreafieldGroup component(or any other component as required) to build the UI.
+      create the onSubmit and onChange event listeners. 
+      do the redux connect, map the state to properties, also define the prop types.
+    Add the component in the App.js for the routing using private route.
+    create reducer for post. 
+      initialize the states in reducer with const to initial values which can be empty array or boolean value.
+      create function to set the action.type based on initialState, use switch statements to switch through action.type
+      create the types, in types.js for the redux to show
+        GET_POST, POST_LOADING .
+      update the root reducer with the post reducer.
+      create the postActions.js, wher u write the action function basically wat the action does.
+        import axios and the required types.
+        write function definition that will take postData passed to the function as argument and dispatch the action.
+        inside the function use axios and call the backend api that we created using the node.js and pass the postData. In the promise, u will get result and then u have to dispatch the action saying it to change the type of the action and payload(response that the api will return to this function as a promise).In the catch, change the type to GET_ERRORS and payload(error response returned by the api).
+  
+  Display post to user:
+    create action in postActions.js. include the method getPost(), which will dispatch the setPostLoading() to change the state of the loading variable in  the redux. Then call the backend api for getting the posts using axios. In the promise, dispatch to change the status of the GET_POSTS in the redux as well as the payload. In the catch, dispatch the to change the status of the GET_POSTS and set payload to null(this is because no post to return from the api)
+    in the postReducer.js add the switch cases for the GET_POSTS (set the state and manke loading to false), POST_LOADING(change the state of the loading to true).
+    
+      
     
 
