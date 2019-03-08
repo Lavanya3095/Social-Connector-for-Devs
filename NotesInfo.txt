@@ -91,5 +91,6 @@ PostFeed:
     in the postReducer.js add the switch cases for the GET_POSTS (set the state and manke loading to false), POST_LOADING(change the state of the loading to true).
     
       
-    
+Like a post:
+  The like font awesome icon is gray by default, id user click then it turns green so that says user already liked so he cannot like again. If the post is not liked by loggedin user then the icon is green. For this ww write function finduserlike() and we take the likes array into that function as parameter and check if the user id is in the array, is so then turn the icon green using classnames or else keep it gray.    
 

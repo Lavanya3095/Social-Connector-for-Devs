@@ -42,14 +42,15 @@ router.get(
 // @desc get all profile
 // @access public route
 router.get("/all", (req, res) => {
+  const errors = {};
   Profile.find()
     .populate("user", ["name", "avatar"])
-    .then(profile => {
-      if (!profile) {
+    .then(profiles => {
+      if (!profiles) {
         errors.noprofile = "There are no profiles";
         return res.status(404).json(errors);
       }
-      res.json(profile);
+      res.json(profiles);
     })
     .catch(err => res.status(404).json({ profile: "There is no profile" }));
 });
@@ -61,7 +62,7 @@ router.get("/handle/:handle", (req, res) => {
   const errors = {};
 
   Profile.findOne({ handle: req.params.handle })
-    .populate("user", ["name", "avater"])
+    .populate("user", ["name", "avatar"])
     .then(profile => {
       if (!profile) {
         errors.noprofile = "There is no profile for this user";

@@ -22,9 +22,7 @@ router.get("/", (req, res) => {
   Post.find()
     .sort({ date: -1 })
     .then(posts => res.json(posts))
-    .catch(err =>
-      res.status(404).json({ nopostfound: "No posts found with that ID" })
-    );
+    .catch(err => res.status(404).json({ nopostsfound: "No posts found" }));
 });
 
 // @route GET api/posts/:id
@@ -55,7 +53,7 @@ router.post(
     const newPost = new Post({
       text: req.body.text,
       name: req.body.name,
-      avater: req.body.avatar,
+      avatar: req.body.avatar,
       user: req.user.id
     });
 
