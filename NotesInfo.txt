@@ -99,3 +99,10 @@ Making keys for production:
   In ur keys_dev.js paste ur mongo and keys data.
   In ur keys_prod put process.env.MONGOURI and process.env.SECRET_OR_KEY
 
+getting ready to push to prod:
+  in dev server is hosted on lovalhost:5000 and frontend hosted on localhost:3000 but while pushing it to prod we have to make full stack pp run in one port so do following steps:
+    in server.js, make it to point to index.html in the client>build folder if hitting other than any specified routes in the server.js
+      app.get('*',(req,res)=>{
+      res.sendFile(path.resolve(__dirname,'client','build','index.html')); });
+  add the script to make the heroku create react app start running. 
+    In root package.json add heroku-postbuild script
