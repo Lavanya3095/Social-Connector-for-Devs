@@ -25,6 +25,20 @@ img {
   height: 100%;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 70px; /* Height of the footer */
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Example value */
+}
+
 .card-form {
   opacity: 0.9;
 }
