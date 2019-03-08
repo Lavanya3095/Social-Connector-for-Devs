@@ -104,5 +104,5 @@ getting ready to push to prod:
     in server.js, make it to point to index.html in the client>build folder if hitting other than any specified routes in the server.js
       app.get('*',(req,res)=>{
       res.sendFile(path.resolve(__dirname,'client','build','index.html')); });
-  add the script to make the heroku create react app start running. 
+  add the script to make the heroku create react app start running. (making the build folder to generate automatically for every update in the app)
     In root package.json add heroku-postbuild script
